@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/cloud-native-maven-eks-cicd.git'
+                git 'https://github.com/khushalbhavsar/Maven-Web-App-CICD-Pipeline-on-AWS-EKS.git'
             }
         }
 
@@ -21,13 +21,13 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t yourdockerhub/cloud-native-maven-app:latest .'
+                sh 'docker build -t khushalbhavsar/cloud-native-maven-app:latest .'
             }
         }
 
         stage('Docker Push') {
             steps {
-                sh 'docker push yourdockerhub/cloud-native-maven-app:latest'
+                sh 'docker push khushalbhavsar/cloud-native-maven-app:latest'
             }
         }
 
